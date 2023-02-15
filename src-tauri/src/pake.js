@@ -6,7 +6,12 @@
  * 每个写在这里的 shortcuts 都会运行 {@link Event.preventDefault}.
  * @type {Record<KeyboardKey, OnKeyDown>}
  */
-
+// JS 调用在线字体
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  link.href = "https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css";
+  document.head.append(link);
 const metaKeyShortcuts = {
   ArrowUp: () => scrollTo(0, 0),
   ArrowDown: () => scrollTo(0, document.body.scrollHeight),
